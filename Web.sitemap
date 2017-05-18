@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Default.aspx" title="首页"  description="首页" >
+        <siteMapNode url="~/Intro.aspx" title="专业介绍"  description ="专业介绍" >
+          <siteMapNode url="~/Introd1.aspx" title="培养要求与学科课程"  description ="培养要求与学科课程" /> 
+          <siteMapNode url="~/Introd2.aspx" title="学位与学业要求" description ="学科与学业要求" /> 
+        </siteMapNode>
+        <siteMapNode url="~/Newscenter.aspx" title="新闻中心"  description ="新闻中心"> 
+          <siteMapNode url="~/Newsdetails.aspx" title="新闻详情" description ="新闻详情" /> 
+        </siteMapNode>
+        <siteMapNode url="~/Lessons.aspx" title="课程中心"  description="课程中心" >
+          <siteMapNode url="~/Lessonsdetails.aspx" title="课程详情" description="课程详情" /> 
+        </siteMapNode>
+    </siteMapNode>
+</siteMap>

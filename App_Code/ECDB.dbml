@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ECDB" Class="ECDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-ORLQLVG;Initial Catalog=ECDB;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ECDBConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Category" Member="Category">
+    <Type Name="Category">
+      <Column Name="CategoryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Descn" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="Category_Lessons" Member="Lessons" ThisKey="CategoryId" OtherKey="CategoryId" Type="Lessons" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Lessons" Member="Lessons">
+    <Type Name="Lessons">
+      <Column Name="LessonsId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Descn" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="Category_Lessons" Member="Category" ThisKey="CategoryId" OtherKey="CategoryId" Type="Category" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.News" Member="News">
+    <Type Name="News">
+      <Column Name="NewsId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+</Database>
